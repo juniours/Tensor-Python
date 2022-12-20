@@ -11,7 +11,7 @@ with open("input.txt") as f:
     try:
         max = int(float(o))
     except ValueError:
-        print("Количество С должно быть числом")
+        print("Количество O должно быть числом")
     if not max and not c and not h:
         if max > c: max = c
         if max > h: max = h
