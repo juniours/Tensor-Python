@@ -1,7 +1,13 @@
+""" XOR шифрование/расшифрование. На входе файл с текстом и ключ шифрования (строка), на выходе преобразованное (зашифрованное/расшифрованное) сообщение в файле. """
+
 def xor(string, key):
+    """ XOR-шифрование и дешифрация.
+    Принимает:
+        string - строку, с которой будут производиться манипуляции.
+        key - строку с ключом
+    """
     len_key = len(key)
     encoded = []
-
     for i in range(0, len(string)):
         encoded.append(string[i] ^ key[i % len_key])
     return bytes(encoded)
@@ -14,7 +20,6 @@ with open(filename) as f:
     codew = []
     for line in f:
         words = line.split()
-        
         for i in range(len(words)):
             words_b.append(words[i].encode('utf-8'))
             words_b.append(b' ')
