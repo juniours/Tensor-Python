@@ -10,7 +10,7 @@ def f(x):
     elif x == 1:
         return 1
     else:
-        return f(x-1)+f(x-2)
+        return f(x-1) + f(x-2)
 
 try:
     n = int(input("Введите номер числа в последовательности Фибоначчи\n"))
